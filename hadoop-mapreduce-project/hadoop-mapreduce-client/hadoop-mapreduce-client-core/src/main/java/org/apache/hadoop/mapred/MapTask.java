@@ -1599,7 +1599,7 @@ public class MapTask extends Task {
       LOG.info("kvstart = " + kvstart + "(" + (kvstart * 4) +
                "); kvend = " + kvend + "(" + (kvend * 4) +
                "); length = " + (distanceTo(kvend, kvstart,
-                     kvmeta.capacity()) + 1) + "/" + maxRec);
+                     kvmeta.capacity()) / 4 + 1) + "/" + maxRec);
       spillReady.signal();
     }
 
